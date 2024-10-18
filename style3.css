@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #191970, #2E8BC0);
+    background-attachment: fixed;
+    color: white;
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjusted width to fill the entire horizontal space */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with more transparency */
+    backdrop-filter: blur(20px);
+    z-index: 1;
+}
+
+#logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+#logo span {
+    font-size: 24px;
+}
+
+#search input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.nav-options {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the menu icon */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Background blur effect */
+}
+
+.nav-options a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-icon:hover .nav-options {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#side-panel {
+    height: 350%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 60px;
+    z-index: 1;
+}
+
+#side-panel h2 {
+    margin-bottom: 20px; /* Add space below the h2 element */
+}
+
+#side-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#side-panel li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+#side-panel a {
+    text-decoration: none;
+    color: white; /* Set default link color to white */
+}
+
+#side-panel a:hover {
+    color: #ADD8E6; /* Set link color to light blue on hover */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 0;
+    margin-top: 50px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem; /* Decreased padding */
+    justify-content: center; /* Center align the content horizontally */
+}
+
+.grid-item {
+    flex: 0 0 calc(40% - 10px);
+    background-color: rgba(0, 0, 0, 0.3); /* Black with more transparency */
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    font-size: 16px;
+    transition: background-color 0.3s; /* Add transition for a smooth effect */
+    cursor: pointer;
+    text-align: center; /* Center align the content inside the grid item */
+}
+
+.grid-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+}
+
+.grid-item button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    width: 100%; /* Make the button same width as the parent grid item */
+}
+
+.grid-item button:hover {
+    text-decoration: underline; /* Add underline on button hover */
+}
+
+.grid-container .grid-item a:link{
+    text-decoration: none;
+}

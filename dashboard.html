@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncTrac</title>
+    <link href="style3.css" rel="stylesheet">
+</head>
+<body>
+    <header id="topbar">
+        <div id="logo">
+          <img src="logo.png" alt="Logo">
+          <span>SyncTrac Warehouse</span>
+        </div>
+        <div id="search">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <nav class="nav-options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </nav>
+        </div>
+        
+      </header>
+
+      <div class="content">
+        <div id="side-panel">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="products.php">Reports</a></li>
+                <li><a href="#">Alerts and Notification</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="contact.html">Contact F/A</a></li>
+            </ul>
+        </div>
+        
+        
+        <div class="grid-container">
+            <div class="grid-item"><a href="oled.html">OLED Monitor</button></div>
+            <div class="grid-item"><a href="#"></a>Central Processing Unit</button></div>
+            <div class="grid-item"><a href="#"></a>Hard Drives</button></div>
+            <div class="grid-item"><a href="#"></a>Keyboard</button></div>
+            <div class="grid-item"><a href="#"></a>Mouse</button></div>
+            <div class="grid-item"><a href="#"></a>Headphones</button></div>
+            <div class="grid-item"><a href="#"></a>Monitor and CPU cover</button></div>
+            <div class="grid-item"><a href="#"></a>Cables and Connectors</button></div>
+        </div>
+
+      </div>
+      <script>
+        function toggleMenu() {
+            var navOptions = document.querySelector('.nav-options');
+            var menuIcon = document.querySelector('.menu-icon');
+            
+            // Calculate the top position for the navigation options
+            var topPosition = menuIcon.getBoundingClientRect().bottom;
+    
+            // Set the top position for the navigation options
+            navOptions.style.top = topPosition + 'px';
+    
+            // Toggle the display style of the navigation options
+            var displayStyle = window.getComputedStyle(navOptions).display;
+            navOptions.style.display = (displayStyle === 'none') ? 'flex' : 'none';
+        }
+    </script>
+    
+    
+    <script>
+        function printOtherPage() {
+            var newWindow = window.open('products.php');
+            newWindow.onload = function() {
+                newWindow.print();
+            };
+        }
+
+    </script>
+</body>

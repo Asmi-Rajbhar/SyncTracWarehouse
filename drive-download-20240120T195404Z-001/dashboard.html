@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style3.css" rel="stylesheet">
+</head>
+<body>
+    <header id="topbar">
+        <div id="logo">
+          <img src="logo.png" alt="Logo">
+          <span>SyncTrac Warehouse</span>
+        </div>
+        <div id="search">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+            <nav class="nav-options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </nav>
+        </div>
+        
+      </header>
+
+      <div class="content">
+        <div id="side-panel">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Alerts and Notification</a></li>
+                <li><a href="#">Form</a></li>
+                <li><a href="#">Contact F/A</a></li>
+
+
+            </ul>
+        </div>
+        
+        
+        <div class="grid-container">
+            <div class="grid-item">Item 1</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+            <div class="grid-item">Item 4</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 6</div>
+            <div class="grid-item">Item 7</div>
+            <div class="grid-item">Item 8</div>
+        </div>
+
+      </div>
+      <script>
+        function toggleMenu() {
+            var navOptions = document.querySelector('.nav-options');
+            var menuIcon = document.querySelector('.menu-icon');
+            
+            // Calculate the top position for the navigation options
+            var topPosition = menuIcon.getBoundingClientRect().bottom;
+    
+            // Set the top position for the navigation options
+            navOptions.style.top = topPosition + 'px';
+    
+            // Toggle the display style of the navigation options
+            var displayStyle = window.getComputedStyle(navOptions).display;
+            navOptions.style.display = (displayStyle === 'none') ? 'flex' : 'none';
+        }
+    </script>
+    
+    
+
+</body>

@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #191970, #2E8BC0);
+    color: black;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space evenly between logo and form */
+    height: 100vh;
+    padding: 0 20px; /* Add padding on both sides */
+}
+
+.logo {
+    width: 50%; /* Take up 50% of the container width */
+    height: auto;
+}
+
+#warehouseForm {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    width: 50%; /* Take up 50% of the container width */
+}
+
+#warehouseForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#warehouseForm input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#warehouseForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #2E8BC0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#warehouseForm button:hover {
+    background-color: #191970;
+}

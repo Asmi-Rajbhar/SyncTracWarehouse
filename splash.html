@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Font+Name&display=swap" rel="stylesheet">
+    <title>Splash Screen</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Lemon, cursive;
+            background-color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 4em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 80%;
+            margin: 0 auto;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 100%;
+            height: 100%;
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="logo.png" alt="Logo">
+        <div class="title">SyncTrac Warehouse</div>
+        <div class="description">Innovate your ideas , Elevate your buisness</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        let progress = document.querySelector('.progress');
+        let width = 10;
+        let interval = setInterval(frame, 50);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(interval);
+                // window.location.href = 'https://warehouse-management-website.com';
+                window.location.href = 'login.html';
+
+            } else {
+                width++;
+                progress.style.width = width + '%';
+            }
+        }
+    </script>
+</body>
+</html>

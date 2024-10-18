@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLED Displays Information</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #191970, #2E8BC0);
+            color: white;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeInUp 1s ease;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OLED Displays</h1>
+    </header>
+
+    <main>
+        <p>OLED (Organic Light Emitting Diode) displays are a type of display technology that utilizes organic compounds to emit light when an electric current is applied. These displays are known for their vibrant colors, high contrast ratios, and fast response times.</p>
+
+        <p>Key features of OLED displays:</p>
+        <ul>
+            <li>Vivid Colors: OLED displays can produce vibrant and saturated colors, providing an excellent viewing experience.</li>
+            <li>High Contrast Ratio: Each pixel in an OLED display emits its own light, allowing for true black levels and high contrast ratios.</li>
+            <li>Thin and Flexible: OLED panels are thin, lightweight, and flexible, making them suitable for various form factors and applications.</li>
+            <li>Fast Response Time: OLEDs have a faster response time compared to traditional display technologies, reducing motion blur.</li>
+        </ul>
+
+        <p>OLED displays are commonly used in smartphones, TVs, wearable devices, and other electronic devices where high-quality visuals are crucial.</p>
+    </main>
+
+    <footer>
+        <p>© 2024 OLED Displays Info</p>
+    </footer>
+</body>
+</html>
